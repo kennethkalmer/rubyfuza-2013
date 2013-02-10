@@ -1,0 +1,16 @@
+@import "bootstrap";
+
+input[type="text"] {
+  width: 130px;
+  text-align: right;
+}
+
+.input-append {
+  input[type="text"] {
+    width: 102px;
+  }
+}
+
+span.wacc {
+  font-weight: bold;
+}

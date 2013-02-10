@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" title="Weighted Average Cost of Capital" href="#">WACC</a>
+      <ul class="nav">
+        <li class="active"><a href="/">Sample Code</a></li>
+        <li><a target="_blank" href="https://speakerdeck.com/kennethkalmer/rhino">Presentation</a></li>
+        <li><a target="_blank" href="https://github.com/kennethkalmer/rubyfuza-2013">Source Code</a></li>
+        <li><a target="_blank" href="https://www.valuationup.com/">ValuationUP</a></li>
+      </ul>
+      <p class="navbar-text pull-right">
+      With &hearts; by <a href="https://twitter.com/kennethkalmer">@kennethkalmer</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+
+      <div id="statement">
+        <form class="form form-horizontal" method="GET" action="/download" target="_blank">
+          <input type="hidden" name="statement">
+
+          <fieldset>
+            <legend>Statement input</legend>
+            <div class="control-group">
+              <label class="control-label" for="equity">Equity</label>
+              <div class="controls">
+                <input type="text" name="equity" id="equity" title="The total equity of the company, ie assets - liabilities">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="debt">Debt</label>
+              <div class="controls">
+                <input type="text" name="debt" id="debt" title="How much debt does the company have?">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="coe">Cost of Equity</label>
+              <div class="controls">
+                <div class="input-append">
+                  <input type="text" name="coe" id="coe" title="The cost of equity">
+                  <span class="add-on">%</span>
+                </div>
+            </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="coe">Cost of Debt</label>
+              <div class="controls">
+                <div class="input-append">
+                  <input type="text" name="cod" id="cod" title="The interest paid on loans">
+                  <span class="add-on">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="tax">Tax Rate</label>
+              <div class="controls">
+                <div class="input-append">
+                  <input type="text" name="tax" id="tax" title="The tax rate the company pays">
+                  <span class="add-on">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button class="btn btn-primary display">Calculate</button>
+                <button class="btn download" type="submit">Download</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+    <div class="span6">
+
+      <div id="wacc" style="display: none">
+        <legend>Weighted Average Cost of Capital</legend>
+        <p>
+          Calculated as: <span class="wacc"></span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
 # This file is used by Rack-based servers to start the application.
 
-run Proc.new { [ 302, {'Location'=> 'https://github.com/kennethkalmer/rubyfuza-2013' }, [] ] }
+require ::File.expand_path('../config/environment',  __FILE__)
+run Rubyfuza2013::Application
